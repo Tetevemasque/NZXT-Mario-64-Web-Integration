@@ -1,0 +1,51 @@
+@font-face {
+    font-family: mario64font;
+    src: url(../font/Mario64.ttf);
+  }
+
+body {
+    position: relative;
+    background-color: black;
+    width: 640px;
+    height: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#health {
+    margin: auto;
+    color: white;
+    font-size: 100px;
+    width: 49px;
+    height: 50px;
+    background-position: center;
+    transform: scale(5.5);
+    transform-origin: top;
+    background: url(../img/health.png) -0px 3px no-repeat;
+}
+
+.info {
+    display: block;
+    font-family: mario64font;
+    color: white;
+    font-size: 60px;
+    text-align: center;
+}
+
+.info#infoTop {
+    margin-top: 250px;
+}
+
+.gradeNormal {
+    color: white;
+}
+
+.gradeWarning {
+    color: orange;
+}
+
+.gradeCritical {
+    color: red;
+}
