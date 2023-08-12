@@ -11,7 +11,7 @@ window.nzxt = {
 
       var health = 8;
       for (let i = 1; i <= 8; i++) {
-        if (cpuCharge > ((100 / 8) * i)) {
+        if (gpuCharge > ((100 / 8) * i)) {
           health--;
         }
       }
@@ -29,7 +29,7 @@ function getInfoContent(label, temp, charge) {
 
 function getGrade(temp) {
   if (temp > 70) {
-    return 'gradeCritial';
+    return 'gradeCritical';
   } else if (temp > 50) {
     return 'gradeWarning';
   } else {
