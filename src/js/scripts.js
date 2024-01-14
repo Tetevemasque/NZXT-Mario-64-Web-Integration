@@ -8,10 +8,14 @@ window.nzxt = {
       var cpuCharge = Math.round((data.cpus[0].load) * 100);
       var gpuTemp = Math.round(data.gpus[0].temperature);
       var gpuCharge = Math.round((data.gpus[0].load) * 100);
+      var chargeForHealth = gpuCharge;
+      if (cpuCharge > gpuCharge) {
+        chargeForHealth = cpuCharge;
+      }
 
       var health = 8;
       for (let i = 1; i <= 8; i++) {
-        if (gpuCharge > ((100 / 8) * i)) {
+        if (chargeForHealth > ((100 / 8) * i)) {
           health--;
         }
       }
